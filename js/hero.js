@@ -1,21 +1,43 @@
 // Professional Hero Section Transitions
 document.addEventListener('DOMContentLoaded', function() {
-    // Ensure header is always visible on all pages
+    // Get elements
     const headerNav = document.querySelector('.header-nav');
-    if (headerNav) {
-        headerNav.classList.add('visible');
-        headerNav.classList.add('permanent');
-        headerNav.style.transform = 'translateY(0)';
-        headerNav.style.opacity = '1';
-        headerNav.style.pointerEvents = 'auto';
-    }
+    const heroSection = document.querySelector('.hero-section');
+    const contentWrapper = document.querySelector('#content-wrapper');
     
     // Add body class for hero styling
     document.body.classList.add('has-hero');
     
-    // Get elements
-    const heroSection = document.querySelector('.hero-section');
-    const contentWrapper = document.querySelector('#content-wrapper');
+    // Function to hide header
+    function hideHeader() {
+        if (headerNav) {
+            headerNav.classList.add('hidden');
+            headerNav.classList.remove('visible');
+            headerNav.classList.remove('permanent');
+        }
+    }
+    
+    // Function to show header
+    function showHeader() {
+        if (headerNav) {
+            headerNav.classList.remove('hidden');
+            headerNav.classList.add('visible');
+            headerNav.classList.add('permanent');
+            headerNav.style.position = 'fixed';
+            headerNav.style.top = '0';
+            headerNav.style.left = '0';
+            headerNav.style.right = '0';
+            headerNav.style.zIndex = '10000';
+        }
+    }
+    
+    // Initially hide header if hero section exists
+    if (heroSection) {
+        hideHeader();
+    } else {
+        // If no hero section, show header immediately
+        showHeader();
+    }
     
     // Professional transition function
     function transitionToCore() {
@@ -35,10 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Step 3: Show header permanently with smooth entrance
         setTimeout(() => {
-            if (headerNav) {
-                headerNav.classList.add('visible');
-                headerNav.classList.add('permanent'); // Add permanent class
-            }
+            showHeader();
         }, 600);
         
         // Step 4: Reveal core content
@@ -75,16 +94,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Simple scroll-based transition - hide hero permanently when scrolling down
+    // Scroll-based transition - hide hero and show header when scrolling down
     let heroHidden = false;
     
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        // Hide hero permanently when scrolling down past 100px
+        // Show header and hide hero when scrolling down past 100px
         if (scrollTop > 100 && !heroHidden && heroSection) {
             heroHidden = true;
             transitionToCore();
+        }
+        
+        // If hero is hidden, ensure header stays visible
+        if (heroHidden && headerNav) {
+            showHeader();
         }
     });
     

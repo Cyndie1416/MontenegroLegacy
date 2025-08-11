@@ -34,18 +34,18 @@ class SiteSearch {
                 content: "Piggery management system for tracking pigs, breeding programs, health monitoring, and production metrics"
             },
             {
-                title: "Grocery Store",
+                title: "Daily Mart",
                 url: "grocery.html",
                 keywords: ["grocery", "store", "retail", "inventory", "products", "sales", "food"],
-                description: "Grocery store management with inventory and sales tracking",
-                content: "Grocery store management system for inventory control, sales tracking, product management, and customer service"
+                description: "Daily Mart management with inventory and sales tracking",
+                content: "Daily Mart management system for inventory control, sales tracking, product management, and customer service"
             },
             {
-                title: "Thrift Store",
+                title: "Glam Again",
                 url: "thrift.html",
                 keywords: ["thrift", "store", "secondhand", "used", "clothing", "donations", "charity"],
-                description: "Thrift store operations and donation management",
-                content: "Thrift store management for handling donations, inventory of used items, pricing, and charitable operations"
+                description: "Glam Again operations and donation management",
+                content: "Glam Again management for handling donations, inventory of used items, pricing, and charitable operations"
             },
             {
                 title: "Apartments",

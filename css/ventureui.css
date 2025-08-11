@@ -11743,10 +11743,16 @@ body {
   opacity: 1 !important;
 }
 
-/* Keep header always visible */
+/* Header hiding functionality for hero section */
 .header-nav.hidden {
-  transform: translateY(0) !important;
-  opacity: 1 !important;
+  transform: translateY(-100%) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Smooth transitions for header show/hide */
+.header-nav {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out !important;
 }
 
 /* Override Bootstrap 4 navbar styles */

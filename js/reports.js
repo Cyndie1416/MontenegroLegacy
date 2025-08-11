@@ -74,7 +74,7 @@
             ]
         },
         grocery: {
-            title: 'Grocery Store Report',
+            title: 'Daily Mart Report',
             metrics: [
                 { name: 'Total Products', value: '1,250' },
                 { name: 'Monthly Revenue', value: '₱45,200' },
@@ -83,7 +83,7 @@
             ]
         },
         thrift: {
-            title: 'Thrift Store Report',
+            title: 'Glam Again Report',
             metrics: [
                 { name: 'Total Items', value: '890' },
                 { name: 'Monthly Revenue', value: '₱12,300' },

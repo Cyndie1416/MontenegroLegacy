@@ -16,8 +16,8 @@ The search system indexes all major pages with relevant keywords:
 
 - **Core** (`index.html`) - Main overview and business metrics
 - **Piggery Management** (`piggery.html`) - Livestock and farm operations
-- **Grocery Store** (`grocery.html`) - Retail and inventory management
-- **Thrift Store** (`thrift.html`) - Secondhand goods and donations
+- **Daily Mart** (`grocery.html`) - Retail and inventory management
+- **Glam Again** (`thrift.html`) - Secondhand goods and donations
 - **Apartments** (`apartments.html`) - Property and rental management
 - **Small Cafe** (`cafe.html`) - Food service and cafe operations
 - **Team Management** (`management.html`) - Employee and organizational management
@@ -98,7 +98,7 @@ Users can search from any page using:
 - **"pigs"** → Piggery Management (high relevance)
 - **"revenue"** → All business pages (medium relevance)
 - **"management"** → Team Management, Core (high relevance)
-- **"store"** → Grocery Store, Thrift Store (high relevance)
+- **"store"** → Daily Mart, Glam Again (high relevance)
 - **"cafe"** → Small Cafe (exact match)
 - **"apartments"** → Apartments (exact match)
 
