@@ -11529,8 +11529,9 @@ body.sidebar-toggled footer.sticky-footer {
 .header-nav {
   z-index: 10000;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateY(-100%);
-  opacity: 0;
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 .header-nav.visible {
@@ -11552,7 +11553,7 @@ body.sidebar-toggled footer.sticky-footer {
 }
 
 #content {
-  margin-top: 80px !important;
+  margin-top: 60px !important;
   padding: 1.5rem !important;
 }
 
@@ -11603,21 +11604,22 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   transition: all 0.3s ease;
   background: linear-gradient(135deg, #4e73df 0%, #224abe 100%) !important;
   transform: translateY(0) !important;
   opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 .header-nav .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: white !important;
 }
 
 .header-nav .brand-icon {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #f8f9fc;
 }
 
@@ -11629,7 +11631,7 @@ body {
 .header-nav .nav-link {
   color: rgba(255, 255, 255, 0.8) !important;
   font-weight: 500;
-  padding: 0.5rem 1rem !important;
+  padding: 0.25rem 0.75rem !important;
   transition: all 0.3s ease;
   border-radius: 0.375rem;
   margin: 0 0.25rem;
@@ -11721,7 +11723,7 @@ body {
 
 /* Adjust content wrapper for fixed header */
 #content-wrapper {
-  margin-top: 80px;
+  margin-top: 60px;
   position: relative;
   z-index: 1;
 }
@@ -11737,11 +11739,14 @@ body {
 .header-nav {
   z-index: 10000;
   transition: transform 0.3s ease-in-out;
+  transform: translateY(0) !important;
+  opacity: 1 !important;
 }
 
-/* Hide header when hero is visible */
+/* Keep header always visible */
 .header-nav.hidden {
-  transform: translateY(-100%);
+  transform: translateY(0) !important;
+  opacity: 1 !important;
 }
 
 /* Override Bootstrap 4 navbar styles */

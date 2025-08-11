@@ -26,11 +26,13 @@
 <body id="page-top">
 
         <!-- Header Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary header-nav permanent shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary header-nav shadow-sm" id="headerNav">
         <div class="container-fluid">
             <!-- Brand -->
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <i class="fas fa-rocket brand-icon mr-2"></i>
+                <div class="brand-icon rotate-n-15 mr-2">
+                    <i class="fas fa-rocket"></i>
+                </div>
                 <span class="brand-text">MontenegroLegacy</span>
             </a>
 
@@ -42,14 +44,6 @@
             <!-- Navigation Items -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
-                    <!-- Core -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            <i class="fas fa-fw fa-tachometer-alt mr-1"></i>
-                            <span>Core</span>
-                        </a>
-                    </li>
-
                     <!-- Dropdown: My Businesses -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="businessesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -87,7 +81,7 @@
                 <ul class="navbar-nav ml-auto">
                     <!-- Search -->
                     <li class="nav-item">
-                        <form class="form-inline">
+                        <form class="form-inline navbar-search">
                             <input class="form-control mr-2" type="search" placeholder="Search..." aria-label="Search">
                             <button class="btn btn-outline-light btn-sm" type="submit">
                                 <i class="fas fa-search"></i>
@@ -156,41 +150,7 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search menu..." aria-label="Search">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
                     <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -599,6 +559,9 @@
 
             <!-- Report Generation -->
             <script src="js/reports.js"></script>
+
+            <!-- Header Fix - Ensures header is always visible -->
+            <script src="js/header-fix.js"></script>
 
         </body>
 

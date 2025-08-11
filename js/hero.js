@@ -1,11 +1,20 @@
 // Professional Hero Section Transitions
 document.addEventListener('DOMContentLoaded', function() {
+    // Ensure header is always visible on all pages
+    const headerNav = document.querySelector('.header-nav');
+    if (headerNav) {
+        headerNav.classList.add('visible');
+        headerNav.classList.add('permanent');
+        headerNav.style.transform = 'translateY(0)';
+        headerNav.style.opacity = '1';
+        headerNav.style.pointerEvents = 'auto';
+    }
+    
     // Add body class for hero styling
     document.body.classList.add('has-hero');
     
     // Get elements
     const heroSection = document.querySelector('.hero-section');
-    const headerNav = document.querySelector('.header-nav');
     const contentWrapper = document.querySelector('#content-wrapper');
     
     // Professional transition function
