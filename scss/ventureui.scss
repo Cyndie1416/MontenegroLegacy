@@ -1,0 +1,36 @@
+/*!
+ * VentureUI Framework v2.0.0 (https://ventureui.com/)
+ * Copyright 2024 MontenegroLegacy
+ * Licensed under MIT License
+ * Advanced Business-Focused UI Framework
+ */
+
+// === CORE FRAMEWORK IMPORTS ===
+// Import VentureUI Variables (Overrides Bootstrap Variables)
+@import "variables.scss";
+
+// Bootstrap foundation loaded via CDN or vendor CSS files
+
+// === VENTUREUI CORE MODULES ===
+// Framework foundation
+@import "mixins.scss";
+@import "global.scss";
+@import "utilities.scss";
+
+// === VENTUREUI COMPONENTS ===
+// Enhanced UI Components
+@import "dropdowns.scss";
+@import "navs.scss";
+@import "buttons.scss";
+@import "cards.scss";
+@import "charts.scss";
+@import "login.scss";
+@import "error.scss";
+@import "footer.scss";
+
+// === VENTUREUI UTILITIES ===
+// Custom utility classes
+@import "utilities/ventureui-utilities.scss";
+
+// === VENTUREUI EXTENSIONS ===
+// Advanced component extensions will be added here

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="MontenegroLegacy - Grocery Store Management Core">
+    <meta name="author" content="MontenegroLegacy">
+
+    <title>MontenegroLegacy - Grocery Store Management</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- VentureUI Framework -->
+    <link href="css/ventureui.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+    <!-- Header Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary header-nav permanent shadow-sm">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-rocket brand-icon mr-2"></i>
+                <span class="brand-text">MontenegroLegacy</span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <!-- Core -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-fw fa-tachometer-alt mr-1"></i>
+                            <span>Core</span>
+                        </a>
+                    </li>
+
+                    <!-- Dropdown: My Businesses -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="businessesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-fw fa-store mr-1"></i>
+                            <span>My Businesses</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="businessesDropdown">
+                            <a class="dropdown-item" href="piggery.html">
+                                <i class="fas fa-fw fa-hand-holding-heart mr-2"></i>Piggery
+                            </a>
+                            <a class="dropdown-item active" href="grocery.html">
+                                <i class="fas fa-fw fa-shopping-basket mr-2"></i>Grocery Store
+                            </a>
+                            <a class="dropdown-item" href="thrift.html">
+                                <i class="fas fa-fw fa-tshirt mr-2"></i>Thrift Store
+                            </a>
+                            <a class="dropdown-item" href="apartments.html">
+                                <i class="fas fa-fw fa-building mr-2"></i>Apartments
+                            </a>
+                            <a class="dropdown-item" href="cafe.html">
+                                <i class="fas fa-fw fa-coffee mr-2"></i>Small Cafe
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- Management -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="management.html">
+                            <i class="fas fa-fw fa-users mr-1"></i>
+                            <span>Team Management</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Right Side Navigation -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Search -->
+                    <li class="nav-item">
+                        <form class="form-inline">
+                            <input class="form-control mr-2" type="search" placeholder="Search inventory..." aria-label="Search">
+                            <button class="btn btn-outline-light btn-sm" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
+
+                    <!-- Notifications -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="notificationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge badge-danger badge-counter">3+</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationsDropdown">
+                            <h6 class="dropdown-header">Notifications</h6>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-file-alt text-primary mr-2"></i>
+                                New monthly report available
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-donate text-success mr-2"></i>
+                                Payment received
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-exclamation-triangle text-warning mr-2"></i>
+                                System alert
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- User Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="img-profile rounded-circle mr-2" src="img/undraw_profile.svg" alt="Profile" style="width: 32px; height: 32px;">
+                            <span>Admin User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Settings
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+            <!-- Page Content -->
+            <div class="container-fluid">
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Grocery Store Management</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Daily Sales -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Daily Sales</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">₱3,240</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-cash-register fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Monthly Revenue -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Monthly Revenue</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">₱89,650</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Inventory Status -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Stock Level</div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">85%</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm mr-2">
+                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-boxes fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Low Stock Alerts -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                Low Stock Items</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">7</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Inventory Management -->
+                        <div class="col-lg-8">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Inventory Overview</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Category</th>
+                                                    <th>Items</th>
+                                                    <th>Stock Level</th>
+                                                    <th>Value</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Fresh Produce</td>
+                                                    <td>85</td>
+                                                    <td>92%</td>
+                                                    <td>₱12,450</td>
+                                                    <td><span class="badge badge-success">Good</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dairy Products</td>
+                                                    <td>32</td>
+                                                    <td>78%</td>
+                                                    <td>₱8,920</td>
+                                                    <td><span class="badge badge-success">Good</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Meat & Poultry</td>
+                                                    <td>24</td>
+                                                    <td>65%</td>
+                                                    <td>₱15,680</td>
+                                                    <td><span class="badge badge-warning">Monitor</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pantry Items</td>
+                                                    <td>156</td>
+                                                    <td>88%</td>
+                                                    <td>₱22,340</td>
+                                                    <td><span class="badge badge-success">Good</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Beverages</td>
+                                                    <td>45</td>
+                                                    <td>45%</td>
+                                                    <td>₱6,780</td>
+                                                    <td><span class="badge badge-danger">Low</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Household Items</td>
+                                                    <td>67</td>
+                                                    <td>82%</td>
+                                                    <td>₱9,120</td>
+                                                    <td><span class="badge badge-success">Good</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Daily Tasks & Alerts -->
+                        <div class="col-lg-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Today's Tasks</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="list-group">
+                                        <div class="list-group-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="task1" checked>
+                                                <label class="custom-control-label" for="task1">Check Fresh Produce</label>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="task2">
+                                                <label class="custom-control-label" for="task2">Restock Beverages</label>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="task3" checked>
+                                                <label class="custom-control-label" for="task3">Update Price Tags</label>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="task4">
+                                                <label class="custom-control-label" for="task4">Clean Refrigeration Units</label>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="task5">
+                                                <label class="custom-control-label" for="task5">Process Delivery Orders</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Top Selling Items -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Top Selling This Week</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <span>White Bread</span>
+                                            <span class="font-weight-bold">145 units</span>
+                                        </div>
+                                        <div class="small text-gray-500">₱2.99 each</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Fresh Milk (1L)</span>
+                                            <span class="font-weight-bold">128 units</span>
+                                        </div>
+                                        <div class="small text-gray-500">₱3.50 each</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Bananas (per kg)</span>
+                                            <span class="font-weight-bold">95 kg</span>
+                                        </div>
+                                        <div class="small text-gray-500">₱4.20 per kg</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Ground Coffee</span>
+                                            <span class="font-weight-bold">67 units</span>
+                                        </div>
+                                        <div class="small text-gray-500">₱8.99 each</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Goals Section -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Grocery Store Goals & Targets</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <!-- Yearly Goals -->
+                                        <div class="col-lg-4 mb-4">
+                                            <h5 class="text-primary mb-3">Yearly Goals (2024)</h5>
+                                            <div class="mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <span class="small font-weight-bold">Annual Revenue</span>
+                                                    <span class="small font-weight-bold">82%</span>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="small text-muted mt-1">₱985,000 / ₱1,200,000</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <span class="small font-weight-bold">Customer Base Growth</span>
+                                                    <span class="small font-weight-bold">75%</span>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="small text-muted mt-1">1,500 / 2,000 customers</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <span class="small font-weight-bold">Product Expansion</span>
+                                                    <span class="small font-weight-bold">65%</span>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="small text-muted mt-1">390 / 600 products</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 4-Month Goals -->
+                                        <div class="col-lg-4 mb-4">
+                                            <h5 class="text-info mb-3">4-Month Goals (Sep-Dec)</h5>
+                                            <div class="mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <span class="small font-weight-bold">Holiday Season Sales</span>
+                                                    <span class="small font-weight-bold">78%</span>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="small text-muted mt-1">₱312,000 / ₱400,000</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <span class="small font-weight-bold">Inventory Optimization</span>
+                                                    <span class="small font-weight-bold">88%</span>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="small text-muted mt-1">Reduce waste by 20%</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <span class="small font-weight-bold">Store Renovation</span>
+                                                    <span class="small font-weight-bold">45%</span>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="small text-muted mt-1">New refrigeration units</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Monthly Goals -->
+                                        <div class="col-lg-4 mb-4">
+                                            <h5 class="text-warning mb-3">Monthly Goals (November)</h5>
+                                            <div class="mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <span class="small font-weight-bold">Monthly Revenue</span>
+                                                    <span class="small font-weight-bold">89%</span>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="small text-muted mt-1">₱80,000 / ₱90,000</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <span class="small font-weight-bold">Fresh Product Quality</span>
+                                                    <span class="small font-weight-bold">95%</span>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="small text-muted mt-1">95% quality rating</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <span class="small font-weight-bold">Customer Satisfaction</span>
+                                                    <span class="small font-weight-bold">92%</span>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="small text-muted mt-1">4.6/5 star rating</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; MontenegroLegacy 2024</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+                <script src="js/sb-admin-2.min.js"></script>
+
+            <!-- Search Functionality -->
+            <script src="js/search.js"></script>
+
+            <!-- Report Generation -->
+            <script src="js/reports.js"></script>
+
+        </body>
+
+</html>

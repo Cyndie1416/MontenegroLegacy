@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Search Results - MontenegroLegacy">
+    <meta name="author" content="MontenegroLegacy">
+
+    <title>Search Results - MontenegroLegacy</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- VentureUI Framework - Advanced Business UI -->
+    <link href="css/ventureui.min.css" rel="stylesheet">
+
+    <style>
+        .search-result-item {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .search-result-item:hover {
+            border-left-color: #4e73df;
+            background-color: #f8f9fc;
+            transform: translateX(5px);
+        }
+        
+        .search-highlight {
+            background-color: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        .relevance-score {
+            font-size: 0.8rem;
+            color: #858796;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        .search-stats {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+        <!-- Header Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary header-nav permanent shadow-sm">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-rocket brand-icon mr-2"></i>
+                <span class="brand-text">MontenegroLegacy</span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <!-- Core -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-fw fa-tachometer-alt mr-1"></i>
+                            <span>Core</span>
+                        </a>
+                    </li>
+
+                    <!-- Dropdown: My Businesses -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="businessesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-fw fa-store mr-1"></i>
+                            <span>My Businesses</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="businessesDropdown">
+                            <a class="dropdown-item" href="piggery.html">
+                                <i class="fas fa-fw fa-hand-holding-heart mr-2"></i>Piggery
+                            </a>
+                            <a class="dropdown-item" href="grocery.html">
+                                <i class="fas fa-fw fa-shopping-basket mr-2"></i>Grocery Store
+                            </a>
+                            <a class="dropdown-item" href="thrift.html">
+                                <i class="fas fa-fw fa-tshirt mr-2"></i>Thrift Store
+                            </a>
+                            <a class="dropdown-item" href="apartments.html">
+                                <i class="fas fa-fw fa-building mr-2"></i>Apartments
+                            </a>
+                            <a class="dropdown-item" href="cafe.html">
+                                <i class="fas fa-fw fa-coffee mr-2"></i>Small Cafe
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- Management -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="management.html">
+                            <i class="fas fa-fw fa-users mr-1"></i>
+                            <span>Team Management</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Right Side Navigation -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Search -->
+                    <li class="nav-item">
+                        <form class="form-inline">
+                            <input class="form-control mr-2" type="search" placeholder="Search..." aria-label="Search">
+                            <button class="btn btn-outline-light btn-sm" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
+
+                    <!-- Notifications -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="notificationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge badge-danger badge-counter">3+</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationsDropdown">
+                            <h6 class="dropdown-header">Notifications</h6>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-file-alt text-primary mr-2"></i>
+                                New monthly report available
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-donate text-success mr-2"></i>
+                                Payment received
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-exclamation-triangle text-warning mr-2"></i>
+                                System alert
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- User Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="img-profile rounded-circle mr-2" src="img/undraw_profile.svg" alt="Profile" style="width: 32px; height: 32px;">
+                            <span>Admin User</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Settings
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content --><div id="content"><!-- Page Content --><div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">
+                            <i class="fas fa-search fa-fw mr-2"></i>
+                            Search Results
+                        </h1>
+                        <a href="index.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-arrow-left fa-sm text-white-50"></i> Back to Core
+                        </a>
+                    </div>
+
+                    <!-- Search Statistics -->
+                    <div class="search-stats" id="searchStats">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="mb-1">Search Results</h5>
+                                <p class="mb-0" id="searchQueryDisplay"></p>
+                            </div>
+                            <div class="col-md-6 text-md-right">
+                                <h5 class="mb-1" id="resultCount">0 results found</h5>
+                                <p class="mb-0">Searching across all MontenegroLegacy pages</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Search Results Container -->
+                    <div id="searchResultsContainer">
+                        <!-- Results will be populated by JavaScript -->
+                    </div>
+
+                    <!-- No Results Message -->
+                    <div class="no-results d-none" id="noResults">
+                        <i class="fas fa-search fa-3x text-gray-300 mb-3"></i>
+                        <h4 class="text-gray-500">No results found</h4>
+                        <p class="text-gray-400">Try searching with different keywords or browse our pages directly.</p>
+                        <div class="mt-3">
+                            <a href="index.html" class="btn btn-primary mr-2">Go to Core</a>
+                            <a href="piggery.html" class="btn btn-outline-primary mr-2">Piggery</a>
+                            <a href="grocery.html" class="btn btn-outline-primary mr-2">Grocery</a>
+                            <a href="thrift.html" class="btn btn-outline-primary mr-2">Thrift Store</a>
+                            <a href="apartments.html" class="btn btn-outline-primary mr-2">Apartments</a>
+                            <a href="cafe.html" class="btn btn-outline-primary mr-2">Cafe</a>
+                            <a href="management.html" class="btn btn-outline-primary">Management</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; MontenegroLegacy 2023</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">Ã—</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Search functionality -->
+    <script src="js/search.js"></script>
+
+    <!-- Search Results Page Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get search results from sessionStorage
+            const { query, results } = window.siteSearch.getStoredResults();
+            
+            // Display search query
+            const searchQueryDisplay = document.getElementById('searchQueryDisplay');
+            const resultCount = document.getElementById('resultCount');
+            const searchResultsContainer = document.getElementById('searchResultsContainer');
+            const noResults = document.getElementById('noResults');
+            
+            if (query) {
+                searchQueryDisplay.textContent = `"${query}"`;
+            }
+            
+            if (results && results.length > 0) {
+                resultCount.textContent = `${results.length} result${results.length > 1 ? 's' : ''} found`;
+                
+                // Display results
+                results.forEach((result, index) => {
+                    const resultItem = createResultItem(result, query, index + 1);
+                    searchResultsContainer.appendChild(resultItem);
+                });
+            } else {
+                resultCount.textContent = '0 results found';
+                searchResultsContainer.classList.add('d-none');
+                noResults.classList.remove('d-none');
+            }
+        });
+        
+        function createResultItem(result, query, index) {
+            const resultDiv = document.createElement('div');
+            resultDiv.className = 'card mb-3 search-result-item';
+            
+            const highlightedTitle = highlightText(result.title, query);
+            const highlightedDescription = highlightText(result.description, query);
+            
+            resultDiv.innerHTML = `
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="flex-grow-1">
+                            <h5 class="card-title mb-1">
+                                <a href="${result.url}" class="text-primary">${highlightedTitle}</a>
+                            </h5>
+                            <p class="card-text text-muted mb-2">${highlightedDescription}</p>
+                            <div class="d-flex align-items-center">
+                                <span class="badge badge-light mr-2">${getPageIcon(result.url)}</span>
+                                <small class="text-muted">${result.url}</small>
+                                <span class="relevance-score ml-auto">Relevance: ${result.score}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            return resultDiv;
+        }
+        
+        function highlightText(text, query) {
+            if (!query) return text;
+            
+            const regex = new RegExp(`(${query})`, 'gi');
+            return text.replace(regex, '<span class="search-highlight">$1</span>');
+        }
+        
+        function getPageIcon(url) {
+            const iconMap = {
+                'index.html': 'ðŸ  Core',
+                'piggery.html': 'ðŸ· Piggery',
+                'grocery.html': 'ðŸ›’ Grocery',
+                'thrift.html': 'ðŸ‘• Thrift',
+                'apartments.html': 'ðŸ¢ Apartments',
+                'cafe.html': 'â˜• Cafe',
+                'management.html': 'ðŸ‘¥ Management'
+            };
+            
+            return iconMap[url] || 'ðŸ“„ Page';
+        }
+    </script>
+
+</body>
+
+</html>
+

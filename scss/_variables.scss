@@ -1,0 +1,194 @@
+// VentureUI Framework Variables
+// Custom Business-Focused UI Framework
+// Built for modern venture management applications
+
+// === CORE COLOR PALETTE ===
+// Modern Neutrals with Enhanced Contrast
+$white: #ffffff !default;
+$gray-50: #f9fafb !default;
+$gray-100: #f3f4f6 !default;
+$gray-200: #e5e7eb !default;
+$gray-300: #d1d5db !default;
+$gray-400: #9ca3af !default;
+$gray-500: #6b7280 !default;
+$gray-600: #4b5563 !default;
+$gray-700: #374151 !default;
+$gray-800: #1f2937 !default;
+$gray-900: #111827 !default;
+$black: #000000 !default;
+
+// === VENTURE BRAND COLORS ===
+// Professional & Modern Color Scheme
+$venture-primary: #2563eb !default;      // Professional Blue
+$venture-secondary: #7c3aed !default;    // Refined Purple
+$venture-accent: #06b6d4 !default;       // Modern Cyan
+$venture-success: #059669 !default;      // Growth Green
+$venture-warning: #d97706 !default;      // Alert Orange
+$venture-danger: #dc2626 !default;       // Error Red
+$venture-info: #0891b2 !default;         // Info Teal
+$venture-dark: #1e293b !default;         // Dark Slate
+$venture-light: #f8fafc !default;        // Light Background
+
+// === SEMANTIC COLORS ===
+$blue: $venture-primary !default;
+$indigo: #4f46e5 !default;
+$purple: $venture-secondary !default;
+$pink: #ec4899 !default;
+$red: $venture-danger !default;
+$orange: $venture-warning !default;
+$yellow: #fbbf24 !default;
+$green: $venture-success !default;
+$teal: $venture-info !default;
+$cyan: $venture-accent !default;
+
+// === SOCIAL BRAND COLORS ===
+$brand-google: #ea4335 !default;
+$brand-facebook: #1877f2 !default;
+$brand-twitter: #1da1f2 !default;
+$brand-linkedin: #0a66c2 !default;
+$brand-github: #333333 !default;
+
+// === GRADIENT DEFINITIONS ===
+$gradient-primary: linear-gradient(135deg, $venture-primary 0%, $venture-accent 100%) !default;
+$gradient-secondary: linear-gradient(135deg, $venture-secondary 0%, $pink 100%) !default;
+$gradient-success: linear-gradient(135deg, $venture-success 0%, $teal 100%) !default;
+$gradient-warning: linear-gradient(135deg, $venture-warning 0%, $yellow 100%) !default;
+$gradient-danger: linear-gradient(135deg, $venture-danger 0%, $pink 100%) !default;
+
+// === ADVANCED TYPOGRAPHY ===
+$body-color: $gray-700 !default;
+$text-muted: $gray-500 !default;
+$headings-color: $gray-900 !default;
+
+// Premium Font Stack
+$font-family-sans-serif: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif !default;
+$font-family-serif: "Georgia", "Times New Roman", serif !default;
+$font-family-monospace: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace !default;
+
+// Enhanced Font Weights
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-black: 900 !default;
+$headings-font-weight: $font-weight-semibold !default;
+
+// Enhanced Typography Scale
+$font-size-xs: 0.75rem !default;    // 12px
+$font-size-sm: 0.875rem !default;   // 14px
+$font-size-base: 1rem !default;     // 16px
+$font-size-lg: 1.125rem !default;   // 18px
+$font-size-xl: 1.25rem !default;    // 20px
+$font-size-2xl: 1.5rem !default;    // 24px
+$font-size-3xl: 1.875rem !default;  // 30px
+$font-size-4xl: 2.25rem !default;   // 36px
+$font-size-5xl: 3rem !default;      // 48px
+
+// Line Heights
+$line-height-tight: 1.25 !default;
+$line-height-snug: 1.375 !default;
+$line-height-normal: 1.5 !default;
+$line-height-relaxed: 1.625 !default;
+$line-height-loose: 2 !default;
+
+// === ENHANCED SHADOWS ===
+$shadow-xs: 0 1px 2px 0 rgba($gray-900, 0.05) !default;
+$shadow-sm: 0 1px 3px 0 rgba($gray-900, 0.1), 0 1px 2px 0 rgba($gray-900, 0.06) !default;
+$shadow-md: 0 4px 6px -1px rgba($gray-900, 0.1), 0 2px 4px -1px rgba($gray-900, 0.06) !default;
+$shadow-lg: 0 10px 15px -3px rgba($gray-900, 0.1), 0 4px 6px -2px rgba($gray-900, 0.05) !default;
+$shadow-xl: 0 20px 25px -5px rgba($gray-900, 0.1), 0 10px 10px -5px rgba($gray-900, 0.04) !default;
+$shadow-2xl: 0 25px 50px -12px rgba($gray-900, 0.25) !default;
+$shadow-inner: inset 0 2px 4px 0 rgba($gray-900, 0.06) !default;
+$shadow-colored: 0 10px 15px -3px rgba($venture-primary, 0.1), 0 4px 6px -2px rgba($venture-primary, 0.05) !default;
+
+// Legacy shadow support
+$box-shadow-sm: $shadow-sm !default;
+$box-shadow: $shadow-md !default;
+$box-shadow-lg: $shadow-lg !default;
+
+// === ENHANCED BORDER RADIUS ===
+$border-radius-none: 0 !default;
+$border-radius-sm: 0.25rem !default;
+$border-radius: 0.5rem !default;
+$border-radius-md: 0.75rem !default;
+$border-radius-lg: 1rem !default;
+$border-radius-xl: 1.5rem !default;
+$border-radius-2xl: 2rem !default;
+$border-radius-pill: 50rem !default;
+
+// Enhanced Border Colors
+$border-color: $gray-200 !default;
+$border-color-light: $gray-100 !default;
+$border-color-dark: $gray-300 !default;
+
+// === VENTURE UI LAYOUT VARIABLES ===
+// Enhanced navigation dimensions
+$topbar-base-height: 4.5rem !default;
+$topbar-mobile-height: 4rem !default;
+$sidebar-base-width: 16rem !default;
+$sidebar-collapsed-width: 4.5rem !default;
+$sidebar-mobile-width: 20rem !default;
+
+// Enhanced spacing system
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,    // 4px
+  2: $spacer * 0.5,     // 8px
+  3: $spacer * 0.75,    // 12px
+  4: $spacer,           // 16px
+  5: $spacer * 1.25,    // 20px
+  6: $spacer * 1.5,     // 24px
+  8: $spacer * 2,       // 32px
+  10: $spacer * 2.5,    // 40px
+  12: $spacer * 3,      // 48px
+  16: $spacer * 4,      // 64px
+  20: $spacer * 5,      // 80px
+  24: $spacer * 6,      // 96px
+  32: $spacer * 8,      // 128px
+) !default;
+
+$grid-gutter-width: $spacer * 1.5 !default;
+
+// === ENHANCED CARDS ===
+$card-bg: $white !default;
+$card-cap-bg: $gray-50 !default;
+$card-border-width: 1px !default;
+$card-border-color: $border-color !default;
+$card-border-radius: $border-radius-lg !default;
+$card-spacer-y: 1.5rem !default;
+$card-spacer-x: 1.5rem !default;
+
+// === ENHANCED TRANSITIONS ===
+$transition-base: all 0.2s ease-in-out !default;
+$transition-fast: all 0.15s ease-in-out !default;
+$transition-slow: all 0.3s ease-in-out !default;
+$transition-collapse: height 0.25s ease !default;
+
+// === ENHANCED DROPDOWNS ===
+$dropdown-bg: $white !default;
+$dropdown-border-color: $border-color !default;
+$dropdown-border-width: 1px !default;
+$dropdown-border-radius: $border-radius !default;
+$dropdown-box-shadow: $shadow-lg !default;
+$dropdown-font-size: $font-size-sm !default;
+$dropdown-padding-y: 0.5rem !default;
+$dropdown-padding-x: 0 !default;
+
+// === ENHANCED BUTTONS ===
+$btn-padding-y: 0.75rem !default;
+$btn-padding-x: 1.5rem !default;
+$btn-padding-y-sm: 0.5rem !default;
+$btn-padding-x-sm: 1rem !default;
+$btn-padding-y-lg: 1rem !default;
+$btn-padding-x-lg: 2rem !default;
+$btn-border-radius: $border-radius !default;
+$btn-border-radius-sm: $border-radius-sm !default;
+$btn-border-radius-lg: $border-radius-md !default;
+$btn-transition: $transition-base !default;
+
+// === MODERN BACKGROUND IMAGES ===
+$login-image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=1200&fit=crop' !default;
+$register-image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1200&fit=crop' !default;
+$password-image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=1200&fit=crop' !default;

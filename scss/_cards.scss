@@ -1,0 +1,270 @@
+// ===============================
+// VENTUREUI ENHANCED CARDS
+// ===============================
+
+// === BASE CARD ENHANCEMENTS ===
+.card {
+  transition: $transition-base;
+  border: none;
+  box-shadow: $shadow-sm;
+  border-radius: $card-border-radius;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+  
+  .card-header {
+    background: $card-cap-bg;
+    border-bottom: 1px solid $border-color;
+    font-weight: $font-weight-semibold;
+    color: $headings-color;
+    
+    // Format Dropdowns in Card Headings
+    .dropdown {
+      line-height: 1;
+      .dropdown-menu {
+        line-height: 1.5;
+      }
+    }
+  }
+  
+  .card-body {
+    padding: $card-spacer-y $card-spacer-x;
+  }
+  
+  .card-footer {
+    background: $card-cap-bg;
+    border-top: 1px solid $border-color;
+  }
+  
+  // Collapsible Card Styling
+  .card-header[data-toggle="collapse"] {
+    text-decoration: none;
+    position: relative;
+    padding: 0.75rem 3.25rem 0.75rem 1.25rem;
+    cursor: pointer;
+    transition: $transition-base;
+    
+    &:hover {
+      background: darken($card-cap-bg, 3%);
+    }
+    
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding-right: 1.725rem;
+      line-height: 51px;
+      font-weight: 900;
+      content: '\f107';
+      font-family: 'Font Awesome 5 Free';
+      color: $gray-400;
+      transition: $transition-base;
+    }
+    
+    &.collapsed {
+      border-radius: $card-border-radius;
+      &::after {
+        content: '\f105';
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+// === MODERN CARD VARIANTS ===
+.card-modern {
+  border: none;
+  border-radius: $border-radius-xl;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-xl;
+  }
+  
+  .card-header {
+    background: linear-gradient(135deg, $venture-primary, $venture-accent);
+    color: $white;
+    border: none;
+    
+    h1, h2, h3, h4, h5, h6 {
+      color: $white;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// === GLASS CARD VARIANT ===
+.card-glass {
+  background: rgba($white, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba($white, 0.2);
+  border-radius: $border-radius-xl;
+  box-shadow: $shadow-lg;
+  
+  .card-header {
+    background: rgba($white, 0.05);
+    border-bottom: 1px solid rgba($white, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  .card-footer {
+    background: rgba($white, 0.05);
+    border-top: 1px solid rgba($white, 0.1);
+    backdrop-filter: blur(10px);
+  }
+}
+
+// === GRADIENT CARDS ===
+.card-gradient {
+  background: $gradient-primary;
+  color: $white;
+  border: none;
+  
+  .card-header {
+    background: transparent;
+    border-bottom: 1px solid rgba($white, 0.2);
+    color: $white;
+  }
+  
+  .card-footer {
+    background: transparent;
+    border-top: 1px solid rgba($white, 0.2);
+  }
+  
+  &.card-gradient-secondary {
+    background: $gradient-secondary;
+  }
+  
+  &.card-gradient-success {
+    background: $gradient-success;
+  }
+  
+  &.card-gradient-warning {
+    background: $gradient-warning;
+  }
+  
+  &.card-gradient-danger {
+    background: $gradient-danger;
+  }
+}
+
+// === STATS CARDS ===
+.card-stats {
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: $venture-primary;
+  }
+  
+  .card-body {
+    padding-left: 2rem;
+  }
+  
+  .stats-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: $border-radius-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($venture-primary, 0.1);
+    color: $venture-primary;
+    font-size: 1.5rem;
+  }
+  
+  .stats-number {
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    color: $headings-color;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  
+  .stats-label {
+    color: $text-muted;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+  }
+  
+  .stats-change {
+    font-size: $font-size-xs;
+    margin-top: 0.5rem;
+    
+    &.positive {
+      color: $green;
+    }
+    
+    &.negative {
+      color: $red;
+    }
+  }
+  
+  &.card-stats-success::before {
+    background: $green;
+  }
+  
+  &.card-stats-warning::before {
+    background: $orange;
+  }
+  
+  &.card-stats-danger::before {
+    background: $red;
+  }
+  
+  &.card-stats-info::before {
+    background: $cyan;
+  }
+}
+
+// === HOVER EFFECTS ===
+.card-hover-lift {
+  transition: $transition-base;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-2xl;
+  }
+}
+
+.card-hover-scale {
+  transition: $transition-base;
+  
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: $shadow-xl;
+  }
+}
+
+// === BORDERLESS CARDS ===
+.card-borderless {
+  border: none;
+  box-shadow: none;
+  
+  .card-header {
+    background: transparent;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .card-footer {
+    background: transparent;
+    border-top: none;
+    padding-top: 0;
+  }
+}

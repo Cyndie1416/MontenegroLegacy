@@ -1,0 +1,361 @@
+// ===============================
+// VENTUREUI CUSTOM UTILITIES
+// ===============================
+
+// === GRADIENT UTILITIES ===
+.bg-gradient-primary {
+  background: $gradient-primary !important;
+}
+
+.bg-gradient-secondary {
+  background: $gradient-secondary !important;
+}
+
+.bg-gradient-success {
+  background: $gradient-success !important;
+}
+
+.bg-gradient-warning {
+  background: $gradient-warning !important;
+}
+
+.bg-gradient-danger {
+  background: $gradient-danger !important;
+}
+
+// === ENHANCED SHADOWS ===
+.shadow-xs {
+  box-shadow: $shadow-xs !important;
+}
+
+.shadow-sm {
+  box-shadow: $shadow-sm !important;
+}
+
+.shadow-md {
+  box-shadow: $shadow-md !important;
+}
+
+.shadow-lg {
+  box-shadow: $shadow-lg !important;
+}
+
+.shadow-xl {
+  box-shadow: $shadow-xl !important;
+}
+
+.shadow-2xl {
+  box-shadow: $shadow-2xl !important;
+}
+
+.shadow-inner {
+  box-shadow: $shadow-inner !important;
+}
+
+.shadow-colored {
+  box-shadow: $shadow-colored !important;
+}
+
+.shadow-none {
+  box-shadow: none !important;
+}
+
+// === GLASSMORPHISM UTILITIES ===
+.glass {
+  background: rgba($white, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba($white, 0.2);
+}
+
+.glass-dark {
+  background: rgba($black, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba($black, 0.2);
+}
+
+// === ENHANCED BORDER RADIUS ===
+.rounded-none {
+  border-radius: $border-radius-none !important;
+}
+
+.rounded-sm {
+  border-radius: $border-radius-sm !important;
+}
+
+.rounded {
+  border-radius: $border-radius !important;
+}
+
+.rounded-md {
+  border-radius: $border-radius-md !important;
+}
+
+.rounded-lg {
+  border-radius: $border-radius-lg !important;
+}
+
+.rounded-xl {
+  border-radius: $border-radius-xl !important;
+}
+
+.rounded-2xl {
+  border-radius: $border-radius-2xl !important;
+}
+
+.rounded-pill {
+  border-radius: $border-radius-pill !important;
+}
+
+// === ADVANCED SPACING ===
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $length in $spacers {
+    .#{$abbrev}-#{$size} {
+      #{$prop}: $length !important;
+    }
+    .#{$abbrev}t-#{$size},
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-top: $length !important;
+    }
+    .#{$abbrev}r-#{$size},
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-right: $length !important;
+    }
+    .#{$abbrev}b-#{$size},
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-bottom: $length !important;
+    }
+    .#{$abbrev}l-#{$size},
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-left: $length !important;
+    }
+  }
+}
+
+// === HOVER EFFECTS ===
+.hover-lift {
+  transition: $transition-base;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.hover-scale {
+  transition: $transition-base;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.hover-rotate {
+  transition: $transition-base;
+  
+  &:hover {
+    transform: rotate(5deg);
+  }
+}
+
+.hover-glow {
+  transition: $transition-base;
+  
+  &:hover {
+    box-shadow: 0 0 20px rgba($venture-primary, 0.5);
+  }
+}
+
+// === MODERN TRANSITIONS ===
+.transition {
+  transition: $transition-base !important;
+}
+
+.transition-fast {
+  transition: $transition-fast !important;
+}
+
+.transition-slow {
+  transition: $transition-slow !important;
+}
+
+// === VENTURE COLOR UTILITIES ===
+.text-venture-primary {
+  color: $venture-primary !important;
+}
+
+.text-venture-secondary {
+  color: $venture-secondary !important;
+}
+
+.text-venture-accent {
+  color: $venture-accent !important;
+}
+
+.text-venture-success {
+  color: $venture-success !important;
+}
+
+.text-venture-warning {
+  color: $venture-warning !important;
+}
+
+.text-venture-danger {
+  color: $venture-danger !important;
+}
+
+.text-venture-info {
+  color: $venture-info !important;
+}
+
+.text-venture-dark {
+  color: $venture-dark !important;
+}
+
+.text-venture-light {
+  color: $venture-light !important;
+}
+
+.bg-venture-primary {
+  background-color: $venture-primary !important;
+}
+
+.bg-venture-secondary {
+  background-color: $venture-secondary !important;
+}
+
+.bg-venture-accent {
+  background-color: $venture-accent !important;
+}
+
+.bg-venture-success {
+  background-color: $venture-success !important;
+}
+
+.bg-venture-warning {
+  background-color: $venture-warning !important;
+}
+
+.bg-venture-danger {
+  background-color: $venture-danger !important;
+}
+
+.bg-venture-info {
+  background-color: $venture-info !important;
+}
+
+.bg-venture-dark {
+  background-color: $venture-dark !important;
+}
+
+.bg-venture-light {
+  background-color: $venture-light !important;
+}
+
+// === BORDER UTILITIES ===
+.border-venture-primary {
+  border-color: $venture-primary !important;
+}
+
+.border-venture-secondary {
+  border-color: $venture-secondary !important;
+}
+
+.border-venture-accent {
+  border-color: $venture-accent !important;
+}
+
+.border-venture-success {
+  border-color: $venture-success !important;
+}
+
+.border-venture-warning {
+  border-color: $venture-warning !important;
+}
+
+.border-venture-danger {
+  border-color: $venture-danger !important;
+}
+
+.border-venture-info {
+  border-color: $venture-info !important;
+}
+
+// === FONT WEIGHT UTILITIES ===
+.font-light {
+  font-weight: $font-weight-light !important;
+}
+
+.font-normal {
+  font-weight: $font-weight-normal !important;
+}
+
+.font-medium {
+  font-weight: $font-weight-medium !important;
+}
+
+.font-semibold {
+  font-weight: $font-weight-semibold !important;
+}
+
+.font-bold {
+  font-weight: $font-weight-bold !important;
+}
+
+.font-black {
+  font-weight: $font-weight-black !important;
+}
+
+// === MODERN CURSORS ===
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed !important;
+}
+
+.cursor-grab {
+  cursor: grab !important;
+}
+
+.cursor-grabbing {
+  cursor: grabbing !important;
+}
+
+// === BACKDROP FILTERS ===
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+}
+
+// === MODERN FLEXBOX UTILITIES ===
+.flex-center {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.flex-between {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.flex-around {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-around !important;
+}
+
+.flex-evenly {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-evenly !important;
+}
