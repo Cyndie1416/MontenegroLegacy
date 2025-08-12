@@ -288,13 +288,13 @@
                 <style>
                     body { font-family: Arial, sans-serif; margin: 20px; }
                     .header { text-align: center; margin-bottom: 30px; }
-                    .logo { font-size: 24px; font-weight: bold; color: #4e73df; }
+                    .logo { font-size: 24px; font-weight: bold; color: #0d2f55; }
                     .title { font-size: 20px; margin: 10px 0; }
                     .date { color: #666; font-size: 14px; }
                     .section { margin: 20px 0; }
                     .metric { margin: 10px 0; padding: 10px; border: 1px solid #ddd; }
                     .metric-name { font-weight: bold; }
-                    .metric-value { color: #4e73df; font-size: 18px; }
+                    .metric-value { color: #0d2f55; font-size: 18px; }
                     .footer { margin-top: 30px; text-align: center; color: #666; }
                 </style>
             </head>
